@@ -5,10 +5,22 @@
 body {
 }
 
-header {
+#colorPickerHeader {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   margin: 25px 14px;
+}
+
+#colorscheme {
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-container {
+  border: red solid 2px;
+  height: 70vh;
+  width: 100%;
 }
 
 li {

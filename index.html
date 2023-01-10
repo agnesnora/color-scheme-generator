@@ -17,9 +17,10 @@
   </head>
   <body>
     <header>
-      <input id="colorPicker" type="color" />
-      <nav>
-        <div>
+      <div id="colorPickerHeader">
+        <input id="colorPicker" type="color" />
+
+        <div class="colorMode">
           <form>
             <select id="colorMode">
               <option value="monochrome" id="monochrome">Monochrome</option>
@@ -39,28 +40,20 @@
               <option value="triad" id="triad">Triad</option>
             </select>
           </form>
-          <!-- 
-          <button class="dropdown-btn">
-            Color Mode <i class="fa-solid fa-circle-chevron-down"></i>
-            <div class="dropdown-codemode active">
-              <a href="#Monochrome" id="monochrome">Monochrome</a>
-              <a href="#Monochrome-dark" id="monochrome-dark"
-                >Monochrome-dark</a
-              >
-              <a href="#Monochrome-light" id="monochrome-light"
-                >Monochrome-light</a
-              >
-              <a href="#Analogic" id="analogic">Analogic</a>
-              <a href="#Complement" id="complement">Complement</a>
-              <a href="#Analogic-complement" id="analogic-complement"
-                >Analogic-complement</a
-              >
-              <a href="#Triad" id="triad">Triad</a>
-            </div>
-          </button> -->
         </div>
-      </nav>
-      <button>Get color scheme</button>
+
+        <button>Get color scheme</button>
+      </div>
+
+      <main>
+        <div id="colorscheme">
+          <div class="color-container" id="container1">1</div>
+          <div class="color-container" id="container2">2</div>
+          <div class="color-container" id="container3">3</div>
+          <div class="color-container" id="container4">4</div>
+          <div class="color-container" id="container5">5</div>
+        </div>
+      </main>
     </header>
     <script src="index.js"></script>
   </body>
