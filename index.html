@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Color Scheme Generator</title>
+  </head>
+  <body>
+    <header>
+      <input id="colorPicker" type="color" />
+      <nav>
+        <div>
+          <form>
+            <select id="colorMode">
+              <option value="monochrome" id="monochrome">Monochrome</option>
+              <option value="monochrome-dark" id="monochrome-dark">
+                Monochrome-dark
+              </option>
+              <option value="monochrome-light" id="monochrome-light">
+                Monochrome-light
+              </option>
+              <option value="analogic" id="analogic">Analogic</option>
+              <option value="complement" id="complement">
+                Complement/option>
+              </option>
+              <option value="analogic-complement" id="analogic-complement">
+                Analogic-complement
+              </option>
+              <option value="triad" id="triad">Triad</option>
+            </select>
+          </form>
+          <!-- 
+          <button class="dropdown-btn">
+            Color Mode <i class="fa-solid fa-circle-chevron-down"></i>
+            <div class="dropdown-codemode active">
+              <a href="#Monochrome" id="monochrome">Monochrome</a>
+              <a href="#Monochrome-dark" id="monochrome-dark"
+                >Monochrome-dark</a
+              >
+              <a href="#Monochrome-light" id="monochrome-light"
+                >Monochrome-light</a
+              >
+              <a href="#Analogic" id="analogic">Analogic</a>
+              <a href="#Complement" id="complement">Complement</a>
+              <a href="#Analogic-complement" id="analogic-complement"
+                >Analogic-complement</a
+              >
+              <a href="#Triad" id="triad">Triad</a>
+            </div>
+          </button> -->
+        </div>
+      </nav>
+      <button>Get color scheme</button>
+    </header>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+}
+
+body {
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 14px;
+}
+
+li {
+  list-style: none;
+}
+
+.dropdown-codemode {
+  display: none;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
