@@ -18,7 +18,7 @@
   <body>
     <header>
       <div id="colorPickerHeader">
-        <input id="colorPicker" type="color" />
+        <input id="colorPicker" type="color" value="#D30342" />
 
         <div class="colorMode">
           <form>
@@ -31,9 +31,7 @@
                 Monochrome-light
               </option>
               <option value="analogic" id="analogic">Analogic</option>
-              <option value="complement" id="complement">
-                Complement/option>
-              </option>
+              <option value="complement" id="complement">Complement</option>
               <option value="analogic-complement" id="analogic-complement">
                 Analogic-complement
               </option>
@@ -42,16 +40,25 @@
           </form>
         </div>
 
-        <button>Get color scheme</button>
+        <button id="getColorBtn">Get color scheme</button>
       </div>
 
       <main>
-        <div id="colorscheme">
-          <div class="color-container" id="container1">1</div>
-          <div class="color-container" id="container2">2</div>
-          <div class="color-container" id="container3">3</div>
-          <div class="color-container" id="container4">4</div>
-          <div class="color-container" id="container5">5</div>
+        <div id="container">
+          <div class="colorscheme" id="colorscheme">
+            <!-- <div class="color-container" id="container1">1</div>
+            <div class="color-container" id="container2">2</div>
+            <div class="color-container" id="container3">3</div>
+            <div class="color-container" id="container4">4</div>
+            <div class="color-container" id="container5">5</div> -->
+          </div>
+          <div class="hexnumber" id="hexnumber">
+            <!-- <div class="hexnumber" id="hex-container1">hex</div>
+            <div class="hexnumber" id="hex-container2">hex</div>
+            <div class="hexnumber" id="hex-container3">hex</div>
+            <div class="hexnumber" id="hex-container4">hex</div>
+            <div class="hexnumber" id="hex-container5">hex</div> -->
+          </div>
         </div>
       </main>
     </header>

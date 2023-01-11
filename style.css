@@ -3,24 +3,33 @@
 }
 
 body {
+  margin: 0;
 }
 
 #colorPickerHeader {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 25px 14px;
 }
 
 #colorscheme {
   display: flex;
-  justify-content: space-between;
+
+  margin: 0 auto;
+}
+#container {
+  width: 100%;
 }
 
-.color-container {
-  border: red solid 2px;
-  height: 70vh;
-  width: 100%;
+p {
+  height: 55vh;
+  text-align: center;
+  padding: 50px;
+}
+
+#hexvalue {
+  height: 8vh;
 }
 
 li {
@@ -29,11 +38,6 @@ li {
 
 .dropdown-codemode {
   display: none;
-}
-
-.active {
-  display: flex;
-  flex-direction: column;
 }
 
 a {
