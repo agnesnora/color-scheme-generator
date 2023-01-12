@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  font-family: "Mukta", sans-serif;
 }
 
 #colorPickerHeader {
@@ -20,6 +21,13 @@ body {
 }
 #container {
   width: 100%;
+}
+
+#colorMode {
+  font-family: "Mukta", sans-serif;
+  width: 40vw;
+  font-size: 1em;
+  line-height: 2em;
 }
 
 p {
@@ -42,4 +50,24 @@ li {
 
 a {
   text-decoration: none;
+}
+
+button {
+  font-family: "Mukta", sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 8px 10px;
+  color: #b7053b;
+  border-radius: 15px;
+  border: none;
+}
+button:hover {
+  background-color: #53031b;
+  color: gray;
+  border: none;
+}
+
+input {
+  font-family: "Mukta", sans-serif;
+  border: none;
 }

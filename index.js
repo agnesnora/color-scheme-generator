@@ -1,6 +1,6 @@
 const colorschemeContainer = document.getElementById("container");
 let pickedColor = document.getElementById("colorPicker");
-let hexWithoutHashtag = "";
+let hexWithoutHashtag = "D30342";
 let mode = document.getElementById("colorMode");
 let modeSet = "";
 
@@ -15,7 +15,7 @@ mode.addEventListener("input", function () {
 });
 
 function renderDefault() {
-  fetch(`https://www.thecolorapi.com/scheme?hex=D30342&mode=monochrome&count=5`)
+  fetch(`https://www.thecolorapi.com/scheme?hex=D30342&mode=${modeSet}&count=5`)
     .then((res) => res.json())
     .then((data) => {
       let defaultHtml = "";
@@ -27,7 +27,6 @@ function renderDefault() {
       
       </div>
       <div>
-
 `;
       });
       colorschemeContainer.innerHTML = defaultHtml;
@@ -56,7 +55,6 @@ document.getElementById("getColorBtn").addEventListener("click", function () {
                          
                          </div>
                          <div>
-
          `;
 
         console.log(color.hex.value);
