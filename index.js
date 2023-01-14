@@ -36,7 +36,7 @@ function render() {
 
         html += `<div class ="colorColumn">
         <p class="colorCell" style="background-color:${hexValue}"></p>
-        <p class="hexNumber" "onclick="copy() data-color="${hexValue}">${hexValue}</p>
+        <p class="hexNumber" onclick="copy(event)" data-color="${hexValue}">${hexValue}</p>
       </div>`;
       });
 
@@ -47,6 +47,10 @@ function render() {
 function dayNight() {
   const bodyEl = document.body;
   bodyEl.classList.toggle("dark-mode");
+}
+
+function copy(e) {
+  navigator.clipboard.writeText(e.target.dataset.color);
 }
 
 document.getElementById("moon").addEventListener("click", dayNight);

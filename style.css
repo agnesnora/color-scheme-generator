@@ -8,6 +8,7 @@ body {
   font-family: "Mukta", sans-serif;
   max-width: 550px;
   background-color: #f8f8f8;
+  margin: 0 auto;
 }
 
 #header {
@@ -43,7 +44,7 @@ body {
 }
 
 .dark-mode {
-  background-color: #22272E;
+  background-color: #22272e;
   color: #f8f8f8;
 }
 #colorpalette {
@@ -101,6 +102,7 @@ button:hover {
 
   #moon,
   #colorMode,
-  #getColorBtn{
-    margin-top:10px;
+  #getColorBtn {
+    margin-top: 10px;
   }
+}
