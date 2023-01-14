@@ -1,73 +1,106 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   font-family: "Mukta", sans-serif;
+  max-width: 550px;
+  background-color: #f8f8f8;
 }
 
-#colorPickerHeader {
+#header {
+  text-align: center;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 25px 14px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1em;
 }
-
-#colorscheme {
-  display: flex;
-
-  margin: 0 auto;
-}
-#container {
-  width: 100%;
-}
-
 #colorMode {
   font-family: "Mukta", sans-serif;
-  width: 40vw;
-  font-size: 1em;
-  line-height: 2em;
-}
-
-p {
-  height: 55vh;
-  text-align: center;
-  padding: 50px;
-}
-
-#hexvalue {
-  height: 8vh;
-}
-
-li {
-  list-style: none;
-}
-
-.dropdown-codemode {
-  display: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
-  font-family: "Mukta", sans-serif;
-  font-size: 1em;
-  line-height: 1.5em;
-  padding: 8px 10px;
-  color: #b7053b;
-  border-radius: 15px;
+  line-height: 1.25em;
+  padding: 4px;
+  font-size: 0.9rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   border: none;
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
 }
-button:hover {
-  background-color: #53031b;
-  color: gray;
-  border: none;
+
+.colorColumn {
+  width: 200px;
+}
+
+.colorCell {
+  height: 70vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.dark-mode {
+  background-color: #22272E;
+  color: #f8f8f8;
+}
+#colorpalette {
+  margin-top: 1em;
 }
 
 input {
-  font-family: "Mukta", sans-serif;
   border: none;
+  height: 3em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
+
+button {
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 10.25em;
+  height: 2.5em;
+  color: #374151;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+button:hover {
+  background-color: #787878;
+  color: #fff;
+}
+
+#moonBtn {
+  padding: 10px;
+  width: 3em;
+}
+
+@media (max-width: 420px) {
+  #header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  #colorpalette {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .colorCell {
+    height: 10vh;
+    width: 100vw;
+  }
+
+  #moon,
+  #colorMode,
+  #getColorBtn{
+    margin-top:10px;
+  }

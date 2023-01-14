@@ -22,52 +22,51 @@
     <title>Color Scheme Generator</title>
   </head>
   <body>
-    <header>
-      <div id="colorPickerHeader">
-        <input id="colorPicker" type="color" value="#D30342" />
-
-        <div class="colorMode">
-          <form>
-            <select id="colorMode">
-              <option value="monochrome" id="monochrome">Monochrome</option>
-              <option value="monochrome-dark" id="monochrome-dark">
-                Monochrome-dark
-              </option>
-              <option value="monochrome-light" id="monochrome-light">
-                Monochrome-light
-              </option>
-              <option value="analogic" id="analogic">Analogic</option>
-              <option value="complement" id="complement">Complement</option>
-              <option value="analogic-complement" id="analogic-complement">
-                Analogic-complement
-              </option>
-              <option value="triad" id="triad">Triad</option>
-            </select>
-          </form>
-        </div>
-
-        <button id="getColorBtn">Get color scheme</button>
+    <div class="container" id="header">
+      <input id="colorPicker" type="color" value="#D30342" />
+      <form>
+        <select id="colorMode">
+          <option value="monochrome" id="monochrome">Monochrome</option>
+          <option value="monochrome-dark" id="monochrome-dark">
+            Monochrome-dark
+          </option>
+          <option value="monochrome-light" id="monochrome-light">
+            Monochrome-light
+          </option>
+          <option value="analogic" id="analogic">Analogic</option>
+          <option value="complement" id="complement">Complement</option>
+          <option value="analogic-complement" id="analogic-complement">
+            Analogic-complement
+          </option>
+          <option value="triad" id="triad">Triad</option>
+        </select>
+      </form>
+      <button id="getColorBtn">Get color</button>
+      <i class="fa-solid fa-moon" id="moon" data-daynight="moon"></i>
+    </div>
+    <div class="container" id="colorpalette">
+      <!-- <div class ="colorColumn">
+        <p class="colorCell"></p>
+        <p class="hexNumber">#D30342</p>
       </div>
+      <div class ="colorColumn">
+        <p class="colorCell"></p>
+        <p class="hexNumber">#D30342</p>
+      </div>
+      <div class ="colorColumn">
+        <p class="colorCell"></p>
+        <p class="hexNumber">#D30342</p>
+      </div>
+      <div class ="colorColumn">
+        <p class="colorCell"></p>
+        <p class="hexNumber">#D30342</p>
+      </div>
+      <div class ="colorColumn">
+        <p class="colorCell""></p>
+        <p class="hexNumber">#D30342</p>
+      </div> -->
+    </div>
 
-      <main>
-        <div id="container">
-          <div class="colorscheme" id="colorscheme">
-            <!-- <div class="color-container" id="container1">1</div>
-            <div class="color-container" id="container2">2</div>
-            <div class="color-container" id="container3">3</div>
-            <div class="color-container" id="container4">4</div>
-            <div class="color-container" id="container5">5</div> -->
-          </div>
-          <div class="hexnumber" id="hexnumber">
-            <!-- <div class="hexnumber" id="hex-container1">hex</div>
-            <div class="hexnumber" id="hex-container2">hex</div>
-            <div class="hexnumber" id="hex-container3">hex</div>
-            <div class="hexnumber" id="hex-container4">hex</div>
-            <div class="hexnumber" id="hex-container5">hex</div> -->
-          </div>
-        </div>
-      </main>
-    </header>
     <script src="index.js"></script>
   </body>
 </html>

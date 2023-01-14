@@ -1,65 +1,52 @@
-const colorschemeContainer = document.getElementById("container");
 let pickedColor = document.getElementById("colorPicker");
-let hexWithoutHashtag = "D30342";
 let mode = document.getElementById("colorMode");
-let modeSet = "";
+let hexWithoutHashtag = "D30342";
+let hex = "";
+let colorModePicked = "";
+let colorScheme = document.getElementById("colorpalette");
 
 pickedColor.addEventListener("input", function () {
-  console.log(pickedColor.value);
-  let hex = pickedColor.value;
-  hexWithoutHashtag = hex.split("#").join("");
+  hex = pickedColor.value;
+  console.log(hex);
+  hexWithoutHashtag = hex.slice(1);
+  console.log(hexWithoutHashtag);
 });
 
-mode.addEventListener("input", function () {
-  modeSet = mode.value.toLowerCase();
+document.getElementById("colorMode").addEventListener("input", function () {
+  console.log(mode.value);
+  colorModePicked = mode.value.toLowerCase();
 });
 
-function renderDefault() {
-  fetch(`https://www.thecolorapi.com/scheme?hex=D30342&mode=${modeSet}&count=5`)
-    .then((res) => res.json())
-    .then((data) => {
-      let defaultHtml = "";
-      data.colors.forEach(function (color) {
-        defaultHtml += `<div id="colorscheme">
-    <div>
-      <p style="background-color:${color.hex.value}"></p>
-      <p id="hexvalue">${color.hex.value}</p>
-      
-      </div>
-      <div>
-`;
-      });
-      colorschemeContainer.innerHTML = defaultHtml;
-    });
-}
-renderDefault();
+document.getElementById("getColorBtn").addEventListener("click", render);
 
-document.getElementById("getColorBtn").addEventListener("click", function () {
-  console.log("fetchben picked:", pickedColor.value);
-  console.log("fetchben hex");
+render();
+function render() {
+  let html = "";
 
   fetch(
-    `https://www.thecolorapi.com/scheme?hex=${hexWithoutHashtag}&mode=${modeSet}&count=5`
+    `https://www.thecolorapi.com/scheme?hex=${hexWithoutHashtag}&mode=${colorModePicked}&count=5`
   )
     .then((res) => res.json())
     .then((data) => {
       console.log(data.colors);
 
       let html = "";
-
       data.colors.forEach(function (color) {
-        html += `<div id="colorscheme">
-                       <div>
-                         <p style="background-color:${color.hex.value}"></p>
-                         <p id="hexvalue">${color.hex.value}</p>
-                         
-                         </div>
-                         <div>
-         `;
+        let hexValue = color.hex.value;
 
-        console.log(color.hex.value);
-
-        colorschemeContainer.innerHTML = html;
+        html += `<div class ="colorColumn">
+        <p class="colorCell" style="background-color:${hexValue}"></p>
+        <p class="hexNumber" "onclick="copy() data-color="${hexValue}">${hexValue}</p>
+      </div>`;
       });
+
+      colorScheme.innerHTML = html;
     });
-});
+}
+
+function dayNight() {
+  const bodyEl = document.body;
+  bodyEl.classList.toggle("dark-mode");
+}
+
+document.getElementById("moon").addEventListener("click", dayNight);
