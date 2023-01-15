@@ -39,6 +39,7 @@ body {
   background-color: rgb(87, 87, 87);
   border-radius: 5px;
   padding: 3px;
+  color: #f0f0f0;
 }
 .colorColumn {
   width: 200px;
