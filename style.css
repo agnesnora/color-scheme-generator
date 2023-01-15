@@ -29,7 +29,17 @@ body {
   border: 1px solid #d1d5db;
   border-radius: 6px;
 }
+.hexNumber {
+  text-align: center;
+  font-size: 0.85em;
+  margin-top: 0.5em;
+}
 
+.hexNumber:hover {
+  background-color: rgb(87, 87, 87);
+  border-radius: 5px;
+  padding: 3px;
+}
 .colorColumn {
   width: 200px;
 }
@@ -43,12 +53,28 @@ body {
   justify-content: center;
 }
 
+#colorpalette {
+  margin-top: 1em;
+}
+
+#click {
+  font-size: 0.85em;
+  margin-top: 2em;
+
+  text-align: center;
+}
+
+#flash {
+  display: block;
+  font-size: 0.85em;
+  text-align: center;
+  color: #b7053b;
+  font-weight: 700;
+}
+
 .dark-mode {
   background-color: #22272e;
   color: #f8f8f8;
-}
-#colorpalette {
-  margin-top: 1em;
 }
 
 input {

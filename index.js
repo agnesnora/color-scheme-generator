@@ -4,6 +4,8 @@ let hexWithoutHashtag = "D30342";
 let hex = "";
 let colorModePicked = "";
 let colorScheme = document.getElementById("colorpalette");
+const flashMessage = "";
+const flashEl = document.getElementById("flash");
 
 pickedColor.addEventListener("input", function () {
   hex = pickedColor.value;
@@ -51,6 +53,16 @@ function dayNight() {
 
 function copy(e) {
   navigator.clipboard.writeText(e.target.dataset.color);
+  showMessage();
+  setTimeout(hideMessage, 1000);
 }
 
 document.getElementById("moon").addEventListener("click", dayNight);
+
+function showMessage() {
+  flashEl.innerHTML = "Copied!";
+}
+
+function hideMessage() {
+  flashEl.innerHTML = "";
+}
