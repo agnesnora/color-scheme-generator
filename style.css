@@ -143,6 +143,7 @@ button:hover {
   .hexNumber:hover,
   .hexNumber :active {
     background-color: #f0f0f0;
+    color: #be006f;
   }
   .dark-mode {
     background-color: #22272e;
