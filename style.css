@@ -126,6 +126,12 @@ button:hover {
   .colorCell {
     height: 10vh;
     width: 100vw;
+    margin-top: 5px;
+  }
+
+  .hexNumber {
+    text-align: left;
+    margin-left: 5px;
   }
 
   /* #moon,
