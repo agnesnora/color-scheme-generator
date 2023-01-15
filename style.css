@@ -140,8 +140,7 @@ button:hover {
     margin-top: 10px;
   } */
 
-  .hexNumber:hover,
-  .hexNumber :active {
+  .hexNumber:hover {
     background-color: #f0f0f0;
     color: #be006f;
   }
