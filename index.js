@@ -52,6 +52,11 @@ function dayNight() {
 }
 
 function copy(e) {
+  // navigator.clipboard.writeText(e.target.dataset.color);
+  // const input = e.target.dataset.color;
+  // console.log(input);
+  // input.select();
+  // input.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(e.target.dataset.color);
   showMessage();
   setTimeout(hideMessage, 1000);
